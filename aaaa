@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int total = 15000;
+    int opcarne, carne;
+    int opques, queso;
+    int optoci, toci;
+    int oppepi, pepi;
+    int opverdu, verdu;
+
+    cout << "Selecciona la hamburguesa y sus toppings" << endl;
+
+    cout << "¿Quiere carne? 1=si, 0=no: ";
+    cin >> opcarne;
+    if (opcarne == 1) {
+        cout << "Cuantas carnes quiere? ";
+        cin >> carne;
+        total += 5000 * carne;
+    }
+
+    cout << "¿Quiere queso? 1=si, 0=no: ";
+    cin >> opques;
+    if (opques == 1) {
+        cout << "Cuantas tajadas quiere? ";
+        cin >> queso;
+        total += 2500 * queso;
+    }
+
+    cout << "¿Quiere tocino? 1=si, 0=no: ";
+    cin >> optoci;
+    if (optoci == 1) {
+        cout << "Cuantas rodajas de tocino quiere? ";
+        cin >> toci;
+        total += 3000 * toci;
+    }
+
+    cout << "¿Quiere pepinillos? 1=si, 0=no: ";
+    cin >> oppepi;
+    if (oppepi == 1) {
+        cout << "Cuantos pepinillos quiere? ";
+        cin >> pepi;
+        total += 1000 * pepi;
+    }
+
+    cout << "¿Quiere verdura? 1=si, 0=no: ";
+    cin >> opverdu;
+    if (opverdu == 1) {
+        cout << "Cuantas verduras quiere? ";
+        cin >> verdu;
+        total += 2500 * verdu;
+    }
+
+    total = total * 1.19;
+
+    cout << "El valor total es: " << total << endl;
+
+    return 0;
+}
