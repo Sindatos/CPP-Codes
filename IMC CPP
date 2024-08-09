@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    float altura, peso, masacorporal;
+
+    cout << "Calculadora de masa corporal y el rango" << endl;
+    cout << "Ingrese su altura en metros (ejemplo: 1.20): ";
+    cin >> altura;
+    cout << "Ingrese el peso en kg: ";
+    cin >> peso;
+
+    masacorporal = peso / (altura * altura);
+
+    cout << "Su masa corporal es: " << masacorporal << endl;
+
+    if (masacorporal < 18.5) {
+        cout << "Está dentro de delgadez severa" << endl;
+    } else if (masacorporal >= 18.5 && masacorporal <= 24.9) {
+        cout << "Su rango de IMC es Normal" << endl;
+    } else if (masacorporal >= 25 && masacorporal <= 29.9) {
+        cout << "Su rango de IMC es Sobrepeso" << endl;
+    } else if (masacorporal >= 30 && masacorporal <= 34.9) {
+        cout << "Su rango de IMC es Obesidad 1" << endl;
+    } else if (masacorporal >= 35 && masacorporal <= 39.9) {
+        cout << "Su rango de IMC es Obesidad 2" << endl;
+    } else {
+        cout << "Su rango de IMC es Obesidad 3" << endl;
+    }
+
+    return 0;
+}
